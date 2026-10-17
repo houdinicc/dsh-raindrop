@@ -1,0 +1,65 @@
+{
+  "name": "dsh-raindrop",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Raindrop.io dashboard for DeepSeek Harness: collection, tag, domain and type analytics, monthly trend and cleanup backlog, plus two agent tools. · Raindrop.io 收藏库仪表盘：分类与标签分布、域名来源、内容类型、月度趋势与待清理项，并提供两个 Agent 工具。",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "houdinicc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houdinicc/dsh-raindrop.git"
+  },
+  "homepage": "https://github.com/houdinicc/dsh-raindrop#readme",
+  "bugs": {
+    "url": "https://github.com/houdinicc/dsh-raindrop/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "raindrop",
+    "bookmarks",
+    "dashboard"
+  ],
+  "engines": {
+    "node": ">=20.11",
+    "dsh": ">=0.2.0-rc.1 <0.3.0"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test/analytics.test.mjs && node test/routes.test.mjs && node test/tools-schema.test.mjs",
+    "test:host": "node test/analytics.test.mjs && node test/routes.test.mjs",
+    "test:schema": "node test/tools-schema.test.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "verify:pack": "node scripts/verify-pack.mjs",
+    "prepack": "node scripts/preflight.mjs"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

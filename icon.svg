@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Raindrop dashboard">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d2b4f"/>
+      <stop offset="1" stop-color="#0e1730"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd3ff"/>
+      <stop offset="1" stop-color="#3b8ef0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bg)"/>
+  <path d="M32 11c5.2 7.1 9.6 13.4 9.6 20.2 0 6.1-4.3 10.8-9.6 10.8s-9.6-4.7-9.6-10.8C22.4 24.4 26.8 18.1 32 11z" fill="url(#drop)"/>
+  <path d="M18 47h7v8h-7z" fill="#5fd0a5"/>
+  <path d="M29 43h7v12h-7z" fill="#f2c14e"/>
+  <path d="M40 39h7v16h-7z" fill="#ef7d6a"/>
+</svg>

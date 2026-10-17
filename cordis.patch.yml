@@ -1,0 +1,16 @@
+# Raindrop 仪表盘 —— 本 bundle 贡献的配置层。
+#
+# 只插入插件自己的一行。`config` 是**整体替换**而非深合并，
+# 在 profile 的 cordis.patch.yml 里覆盖时要把想保留的字段一并写全。
+- insert:
+    - id: raindrop
+      name: 'dsh-raindrop'
+      config:
+        # 采样页数：仪表盘为「域名 Top / 月度趋势 / 最近收藏 / 待清理」拉取最近
+        # scanPages * 50 条书签做样本。总数/类型/死链/未分类等精确值来自聚合接口，
+        # 不受这个值影响。0 = 完全不采样（只出精确统计）。
+        scanPages: 8
+        # 数据缓存秒数；面板上的「刷新」会强制绕过。
+        cacheTtlSeconds: 300
+        # 是否注册 raindrop_overview / raindrop_search 两个 Agent 工具。
+        enableTools: true
