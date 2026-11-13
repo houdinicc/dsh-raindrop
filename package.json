@@ -1,6 +1,6 @@
 {
   "name": "dsh-raindrop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Raindrop.io dashboard for DeepSeek Harness: collection, tag, domain and type analytics, monthly trend and cleanup backlog, plus two agent tools. · Raindrop.io 收藏库仪表盘：分类与标签分布、域名来源、内容类型、月度趋势与待清理项，并提供两个 Agent 工具。",
   "icon": "./icon.svg",
